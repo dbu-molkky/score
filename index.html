@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>モルック得点計算 - möln</title>
+  <title>モルック得点計算</title>
   <style>
     * {
       margin: 0;
@@ -235,6 +235,46 @@
       box-shadow: 0 8px 25px rgba(244, 67, 54, 0.4);
     }
 
+    .home-btn {
+      background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+      color: white;
+      display: block;
+      margin: 2rem auto 0 auto;
+      box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+      text-decoration: none;
+      text-align: center;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: none;
+    }
+
+    .home-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+
+    .home-btn:hover::before {
+      left: 100%;
+    }
+
+    .home-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
+      text-decoration: none;
+    }
+
     .disabled-btn {
       background: #e0e0e0 !important;
       color: #9e9e9e !important;
@@ -384,6 +424,10 @@
         width: 100%;
       }
       
+      .home-btn {
+        width: 100%;
+      }
+      
       footer {
         padding: 2rem 1rem 1.5rem 1rem;
         clip-path: ellipse(100% 80% at 50% 100%);
@@ -421,6 +465,8 @@
       </div>
 
       <button onclick="resetGame()" class="reset">リセット</button>
+      
+      <a href="https://dbu-molkky.github.io/homepage/" class="home-btn">ホームページに戻る</a>
       
     </div>
 
